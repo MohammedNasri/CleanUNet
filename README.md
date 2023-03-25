@@ -90,13 +90,14 @@ For example, if you want to use pre-trained models to denoise, run:
 
 1 GPU is used for denoising.
 
-## Simple Denoising without dataset
+## Simple Denoising with dataset
 
-There is a script `simple_infrence.py` to denoise single or multiple files. It also does automatic fp16 conversion. You can also adjust batch size to fit your vram.
+There is a script `simple_infrence.py` to denoise a dataset. It also does automatic fp16 conversion. You can also adjust batch size to fit your vram.
 
-```denoise_simple.py python denoise.py -c configs/${EXP}.json --ckpt_path ${file.plk} -b 1000000 `<you file list here>````
+```denoise_simple.py python denoise.py -c configs/${EXP}.json --ckpt_path ${file.plk} -b 1000000 `<you dataset here>````
 
-``` python denoise_simple.py -c configs/DNS-large-high.json --ckpt_pat ./exp/DNS-large-high/checkpoint/pretrained.pkl ./test.mp4```
+``` python denoise_simple.py -c configs/DNS-large-high.json --ckpt_pat ./exp/DNS-large-high/checkpoint/pretrained.pkl ./dataset.json ```
+
 
 ## Evaluation
 
